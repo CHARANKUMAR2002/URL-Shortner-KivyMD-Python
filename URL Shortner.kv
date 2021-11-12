@@ -1,0 +1,36 @@
+Screen:
+
+    MDCard:
+        size_hint: None, None
+        size: 300, 400
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        elivation: 10
+        padding: 25
+        spacing: 25
+        orientation: "vertical"
+        MDLabel:
+            id: title
+            text: "URL SHORTENER"
+            font_size: 30
+            halign: 'center'
+            size_hint_y: None
+            height: self.texture_size[1]
+        MDTextFieldRound:
+            id: url
+            hint_text: "Enter Your Url"
+            icon_left: "link"
+        MDRoundFlatButton:
+            text: "Generate"
+            pos_hint: {"center_x": .5}
+            on_release: app.short()
+        MDTextFieldRound:
+            id: surl
+            hint_text: "Shortern URL"
+            icon_left: "link"
+        MDRoundFlatButton:
+            text: "Clear"
+            pos_hint: {"center_x": .5}
+            on_release: app.clear()
+        Widget:
+            size_hint_y: None
+            height: 35
